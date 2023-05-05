@@ -1,11 +1,12 @@
 let cantCarnes = prompt("Ingresar la cantidad de productos comprados en carnes");
 let cantLacteos = prompt("Ingresar la cantidad de productos comprados en lacteos ");
 let cantEnlatados = prompt("Ingresar la cantidad de productos comprados en enlatados");
-
+let cantProdVariados = prompt ("Ingresar la cantidad de productos varios comprados ");
 
 alert("El precio de cada producto en carnes es de $1800 ");
 alert("El precio de cada producto en lacteos es de $800 ");
 alert("El precio de cada producto en enlatados es de $500 ");
+alert("El precio de cada producto variados es de $ 700 ");
 
 confirm("Confirme los datos ingresados");
 
@@ -13,9 +14,11 @@ confirm("Confirme los datos ingresados");
 const precioCarnes = 1800;
 const precioLacteos = 800;
 const precioEnlat= 500;
+const precioProductosVarios = 700;
 const totalCarne= cantCarnes * precioCarnes;
 const totalLacteos= cantLacteos * precioLacteos;
 const totalEnlat = cantEnlatados * precioEnlat;
+const totalProductosVarios = cantProdVariados * precioProductosVarios;
 const descuentoCarne = 25/100;
 const descuentoLacteos = 50/100;
 const descuentoEnlat = 70/100;
@@ -26,8 +29,8 @@ const montoTotalCarne = totalCarne - totalDescCarnes;
 const montoTotalLacteos = totalEnlat - totalDescLacteos;
 const montoTotalEnlat = totalEnlat - totalDescEnlat;
 const totalPagar= (montoTotalCarne + montoTotalLacteos + montoTotalEnlat);
-const subtotal= (totalCarne + totalLacteos + totalEnlat);
-const descuentoTotal= (totalDescCarnes + totalDescLacteos + totalDescEnlat);
+const subtotal= (totalCarne + totalLacteos + totalEnlat + totalProductosVarios);
+const descuentoTotal= (totalDescCarnes + totalDescLacteos + totalDescEnlat );
 
 document.write("El subtotal de la compra es de $ " + subtotal);
 document.write(" Descuento total en Carnes $ " + totalDescCarnes );
